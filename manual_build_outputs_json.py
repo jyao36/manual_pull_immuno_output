@@ -322,6 +322,65 @@ def expand_immuno_pvacseq_mhc_lists(outputs_obj: Dict[str, Any], stats: Dict[str
             stats["pvacseq_glob_list_expanded"] += 1
 
 
+def expand_cnvkit_bed_paths(outputs_obj: Dict[str, Any], stats: Dict[str, int]) -> None:
+    """
+    Special handling for immuno.somatic.cnv.cnvkit:
+    replace template-specific BED entries with all *.bed files found in the
+    mapped cnvkit execution directory/directories.
+    """
+    somatic = outputs_obj.get("immuno.somatic")
+    if not isinstance(somatic, dict):
+        return
+    cnv = somatic.get("cnv")
+    if not isinstance(cnv, dict):
+        return
+    cnvkit = cnv.get("cnvkit")
+    if not isinstance(cnvkit, list):
+        return
+
+    execution_dirs: List[Path] = []
+    for v in cnvkit:
+        if not isinstance(v, str):
+            continue
+        p = Path(v)
+        for parent in [p.parent, *p.parents]:
+            if parent.name == "execution":
+                if parent.is_dir():
+                    execution_dirs.append(parent)
+                break
+
+    bed_files: List[str] = []
+    seen = set()
+    for ex_dir in sorted(set(execution_dirs), key=lambda x: str(x)):
+        for root, _dirs, files in os.walk(ex_dir):
+            root_p = Path(root)
+            for fn in sorted(files):
+                if not fn.endswith(".bed"):
+                    continue
+                fp = str(root_p / fn)
+                if fp in seen:
+                    continue
+                seen.add(fp)
+                bed_files.append(fp)
+
+    if not bed_files:
+        return
+
+    # Keep non-BED list entries in original order (including nulls), and
+    # replace all BED entries with discovered BED files.
+    non_bed_entries: List[Any] = []
+    for v in cnvkit:
+        if isinstance(v, str) and v.endswith(".bed"):
+            continue
+        non_bed_entries.append(v)
+
+    new_list = bed_files + non_bed_entries
+    if new_list != cnvkit:
+        cnv["cnvkit"] = new_list
+        stats["cnvkit_bed_list_expanded"] += 1
+        stats["cnvkit_bed_paths_added"] += len(bed_files)
+
+
 def rewrite_outputs_obj(
     obj: Any,
     idx: Dict[OutputKey, Path],
@@ -486,6 +545,8 @@ def main() -> int:
         "paths_rewritten_fastqc_fallback": 0,
         "paths_unmapped": 0,
         "pvacseq_glob_list_expanded": 0,
+        "cnvkit_bed_list_expanded": 0,
+        "cnvkit_bed_paths_added": 0,
     }
 
     rewritten = {
@@ -499,6 +560,7 @@ def main() -> int:
         )
     }
     expand_immuno_pvacseq_mhc_lists(rewritten["outputs"], stats)
+    expand_cnvkit_bed_paths(rewritten["outputs"], stats)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
@@ -516,6 +578,8 @@ def main() -> int:
         f"  paths_rewritten: {stats['paths_rewritten']}\n"
         f"  paths_rewritten_fastqc_fallback: {stats['paths_rewritten_fastqc_fallback']}\n"
         f"  pvacseq_glob_list_expanded: {stats['pvacseq_glob_list_expanded']}\n"
+        f"  cnvkit_bed_list_expanded: {stats['cnvkit_bed_list_expanded']}\n"
+        f"  cnvkit_bed_paths_added: {stats['cnvkit_bed_paths_added']}\n"
         f"  paths_unmapped (left as-is): {stats['paths_unmapped']}\n"
     )
 
