@@ -1,0 +1,425 @@
+{
+    "outputs": {
+        "immuno.somatic": {
+            "final": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-vcfReadcount/vcfReadcount/b300a976-df7a-4c95-aca4-c901a84e86ba/call-index/execution/annotated.bam_readcount.vcf.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-vcfReadcount/vcfReadcount/b300a976-df7a-4c95-aca4-c901a84e86ba/call-index/execution/annotated.bam_readcount.vcf.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-annotatedFilterIndex/execution/annotated_filtered.vcf.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-annotatedFilterIndex/execution/annotated_filtered.vcf.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-addVepFieldsToTable/execution/variants.annotated.tsv"
+            ],
+            "variants": {
+                "strelka": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-strelka/strelkaAndPostProcessing/69a79030-d737-48a1-bfda-93f1e85929a9/call-filter/fpFilter/5037ea08-7951-4d55-85f4-3ab3715f291f/call-fpIndex/execution/strelka_full.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-strelka/strelkaAndPostProcessing/69a79030-d737-48a1-bfda-93f1e85929a9/call-filter/fpFilter/5037ea08-7951-4d55-85f4-3ab3715f291f/call-fpIndex/execution/strelka_full.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-strelka/strelkaAndPostProcessing/69a79030-d737-48a1-bfda-93f1e85929a9/call-filter/fpFilter/5037ea08-7951-4d55-85f4-3ab3715f291f/call-hardFilter/execution/strelka_filtered.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-strelka/strelkaAndPostProcessing/69a79030-d737-48a1-bfda-93f1e85929a9/call-filter/fpFilter/5037ea08-7951-4d55-85f4-3ab3715f291f/call-hardFilter/execution/strelka_filtered.vcf.gz.tbi"
+                ],
+                "mutect": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-mutect/mutect/54e09a66-06ab-4ee0-a013-9fd7220d2e3f/call-fpFilter/fpFilter/ea2c70df-a76b-406e-be8a-21c4a9e8cc92/call-fpIndex/execution/mutect_full.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-mutect/mutect/54e09a66-06ab-4ee0-a013-9fd7220d2e3f/call-fpFilter/fpFilter/ea2c70df-a76b-406e-be8a-21c4a9e8cc92/call-fpIndex/execution/mutect_full.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-mutect/mutect/54e09a66-06ab-4ee0-a013-9fd7220d2e3f/call-fpFilter/fpFilter/ea2c70df-a76b-406e-be8a-21c4a9e8cc92/call-hardFilter/execution/mutect_filtered.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-mutect/mutect/54e09a66-06ab-4ee0-a013-9fd7220d2e3f/call-fpFilter/fpFilter/ea2c70df-a76b-406e-be8a-21c4a9e8cc92/call-hardFilter/execution/mutect_filtered.vcf.gz.tbi"
+                ],
+                "varscan": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-varscan/varscanPreAndPostProcessing/63fbbf3f-8083-41ef-bbbd-48c76c681824/call-filter/fpFilter/d7713830-4036-4307-a1ca-5ac270f9f1f5/call-fpIndex/execution/varscan_full.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-varscan/varscanPreAndPostProcessing/63fbbf3f-8083-41ef-bbbd-48c76c681824/call-filter/fpFilter/d7713830-4036-4307-a1ca-5ac270f9f1f5/call-fpIndex/execution/varscan_full.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-varscan/varscanPreAndPostProcessing/63fbbf3f-8083-41ef-bbbd-48c76c681824/call-filter/fpFilter/d7713830-4036-4307-a1ca-5ac270f9f1f5/call-hardFilter/execution/varscan_filtered.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-varscan/varscanPreAndPostProcessing/63fbbf3f-8083-41ef-bbbd-48c76c681824/call-filter/fpFilter/d7713830-4036-4307-a1ca-5ac270f9f1f5/call-hardFilter/execution/varscan_filtered.vcf.gz.tbi"
+                ],
+                "docm": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-docm/docmCle/145ddb5a-9443-4b45-b1e0-3a0431e51646/call-index2/execution/docm_filtered_variants.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-detectVariants/detectVariants/168887f5-ba07-41a2-aae5-0f485019f43f/call-docm/docmCle/145ddb5a-9443-4b45-b1e0-3a0431e51646/call-index2/execution/docm_filtered_variants.vcf.gz.tbi"
+                ]
+            },
+            "cnv": {
+                "cnvkit": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/IDT_xGen_Lockdown_Exome_v1.baits.plusEnsemblCDS.2.antitarget.bed",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/IDT_xGen_Lockdown_Exome_v1.baits.plusEnsemblCDS.2.target.bed",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/normal.antitargetcoverage.cnn",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/normal.targetcoverage.cnn",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/reference.cnn",
+                    null,
+                    null,
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/tumor.antitargetcoverage.cnn",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/tumor.targetcoverage.cnn",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/tumor.cnr",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-cnvkit/execution/tumor.cns"
+                ]
+            },
+            "sv": {
+                "manta": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/diploidSV.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/diploidSV.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/somaticSV.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/somaticSV.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/candidateSV.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/candidateSV.vcf.gz.tbi",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/candidateSmallIndels.vcf.gz",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-manta/execution/results/variants/candidateSmallIndels.vcf.gz.tbi",
+                    null,
+                    null
+                ]
+            }
+        },
+        "immuno.tumor_cram": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorIndexCram/execution/tumor.cram",
+        "immuno.hla_typing": [
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-optitype/execution/optitype_normal_result.tsv",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-optitype/execution/optitype_normal_coverage_plot.pdf",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-optitype/execution/optitype_tumor_result.tsv",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-optitype/execution/optitype_tumor_coverage_plot.pdf",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-hlahd/execution/hlahd_tumor_DNA/result/hlahd_tumor_DNA_final.result.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-hlahd/execution/hlahd_normal_DNA/result/hlahd_normal_DNA_final.result.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-phlat/execution/phlat_normal_HLA.sum",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-phlat/execution/phlat_tumor_HLA.sum",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-extractAlleles/execution/hla_calls_newline.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-hlaConsensus/execution/hla_calls/consensus_calls.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-hlaConsensus/execution/glob-3a303f59770424978096b669441cad03/consensus_calls.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-hlaConsensus/execution/glob-3a303f59770424978096b669441cad03/consensus_calls_newline.txt",
+            "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-hlaConsensus/execution/glob-3a303f59770424978096b669441cad03/hla_calls.txt"
+        ],
+        "immuno.pVACseq": {
+            "mhc_i_log": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/inputs_class_I.yml",
+            "splice_fasta_fai": null,
+            "mhc_i": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.aggregated.metrics.json",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.aggregated.tsv.reference_matches",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.MHC_I.filtered.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.fasta",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.fasta.proximal_variants.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.proximal_variants.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.tsv_1-100",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/Hu_159_TUMOR_DNA.tsv_101-126",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/anchor_and_helper_functions.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/app.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/custom_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/neofox_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/server.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/styling.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-4590d870ac8b903ffb91ed8da5033243/ui.R"
+            ],
+            "mhc_ii_log": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/inputs_class_II.yml",
+            "splice_transcript_combined_report": null,
+            "mhc_ii": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.aggregated.metrics.json",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.aggregated.tsv.reference_matches",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.MHC_II.filtered.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.fasta",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.fasta.proximal_variants.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.proximal_variants.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.tsv_1-100",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/Hu_159_TUMOR_DNA.tsv_101-126",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/anchor_and_helper_functions.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/app.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/custom_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/neofox_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/server.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/styling.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-057fc7ae2bb9bc8682ded9d4b964370d/ui.R"
+            ],
+            "splice_gtf": null,
+            "regtools_output": null,
+            "splice_fasta": null,
+            "phase_vcf": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-phaseVcf/phaseVcf/ac6dcc58-8283-4f06-93d7-88bc4c51b25c/call-bgzipAndIndexPhasedVcf/bgzipAndIndex/981e5bd4-0e7d-4940-bb17-3acf7b248c19/call-index/execution/phased.vcf.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-phaseVcf/phaseVcf/ac6dcc58-8283-4f06-93d7-88bc4c51b25c/call-bgzipAndIndexPhasedVcf/bgzipAndIndex/981e5bd4-0e7d-4940-bb17-3acf7b248c19/call-index/execution/phased.vcf.gz.tbi"
+            ],
+            "combined": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/Hu_159_TUMOR_DNA.Combined.all_epitopes.aggregated.metrics.json",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/Hu_159_TUMOR_DNA.Combined.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/Hu_159_TUMOR_DNA.Combined.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/Hu_159_TUMOR_DNA.Combined.filtered.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/anchor_and_helper_functions.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/app.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/custom_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/neofox_ui.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/server.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/styling.R",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-ps/execution/glob-3e2bd65991f8e797134f2788580da214/ui.R"
+            ],
+            "mhc_log": null
+        },
+        "immuno.pVACfuse": {
+            "mhc_i_log": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/inputs_class_I.yml",
+            "splice_fasta_fai": null,
+            "mhc_i": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-8632c80b4eaae1584b34ee63ac12feda/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-8632c80b4eaae1584b34ee63ac12feda/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.aggregated.tsv.reference_matches",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-8632c80b4eaae1584b34ee63ac12feda/Hu_159_TUMOR_DNA.MHC_I.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-8632c80b4eaae1584b34ee63ac12feda/Hu_159_TUMOR_DNA.MHC_I.filtered.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-8632c80b4eaae1584b34ee63ac12feda/Hu_159_TUMOR_DNA.fasta"
+            ],
+            "mhc_ii_log": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/inputs_class_II.yml",
+            "splice_transcript_combined_report": null,
+            "mhc_ii": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-e6e730729b4eb293f051f52fbcaf6f09/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-e6e730729b4eb293f051f52fbcaf6f09/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.aggregated.tsv.reference_matches",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-e6e730729b4eb293f051f52fbcaf6f09/Hu_159_TUMOR_DNA.MHC_II.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-e6e730729b4eb293f051f52fbcaf6f09/Hu_159_TUMOR_DNA.MHC_II.filtered.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-e6e730729b4eb293f051f52fbcaf6f09/Hu_159_TUMOR_DNA.fasta"
+            ],
+            "splice_gtf": null,
+            "regtools_output": null,
+            "splice_fasta": null,
+            "phase_vcf": null,
+            "combined": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-288a81513ba2bb09b29a5e8d4be3bf42/Hu_159_TUMOR_DNA.Combined.all_epitopes.aggregated.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-288a81513ba2bb09b29a5e8d4be3bf42/Hu_159_TUMOR_DNA.Combined.all_epitopes.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacfuse/execution/glob-288a81513ba2bb09b29a5e8d4be3bf42/Hu_159_TUMOR_DNA.Combined.filtered.tsv"
+            ],
+            "mhc_log": null
+        },
+        "immuno.qc": {
+            "normal_dna": {
+                "insert_size_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectInsertSizeMetrics/execution/normal.InsertSizeMetrics.txt",
+                "alignment_summary_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectAlignmentSummaryMetrics/execution/normal.AlignmentSummaryMetrics.txt",
+                "insert_size_histogram": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectInsertSizeMetrics/execution/normal.InsertSizeHistogram.pdf",
+                "per_base_coverage_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectDetailedHsMetrics/hsMetrics/a5c388a5-0b3a-4302-87ba-46dd4152acba/call-collectPerBaseHsMetrics/shard-0/execution/normal.base-clinvar-PerBaseCoverage.txt"
+                ],
+                "summary_hs_metrics": [],
+                "gc_bias_metrics_chart": null,
+                "bamcoverage_bigwig": null,
+                "gc_bias_metrics": null,
+                "verify_bam_id_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-verifyBamId/execution/normal.VerifyBamId.selfSM",
+                "per_target_hs_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectDetailedHsMetrics/hsMetrics/a5c388a5-0b3a-4302-87ba-46dd4152acba/call-collectPerTargetHsMetrics/shard-0/execution/normal.target-acmg_genes-HsMetrics.txt"
+                ],
+                "wgs_metrics": null,
+                "flagstats": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-samtoolsFlagstat/execution/normal.bam.flagstat",
+                "verify_bam_id_depth": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-verifyBamId/execution/normal.VerifyBamId.depthSM",
+                "per_target_coverage_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectDetailedHsMetrics/hsMetrics/a5c388a5-0b3a-4302-87ba-46dd4152acba/call-collectPerTargetHsMetrics/shard-0/execution/normal.target-acmg_genes-PerTargetCoverage.txt"
+                ],
+                "per_base_hs_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectDetailedHsMetrics/hsMetrics/a5c388a5-0b3a-4302-87ba-46dd4152acba/call-collectPerBaseHsMetrics/shard-0/execution/normal.base-clinvar-HsMetrics.txt"
+                ],
+                "gc_bias_metrics_summary": null,
+                "hs_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalQc/qcExome/c47e50ce-3525-4f42-8e4e-8cd64e2df5d6/call-collectRoiHsMetrics/execution/normal.roi-HsMetrics.txt"
+            },
+            "tumor_dna": {
+                "insert_size_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectInsertSizeMetrics/execution/tumor.InsertSizeMetrics.txt",
+                "alignment_summary_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectAlignmentSummaryMetrics/execution/tumor.AlignmentSummaryMetrics.txt",
+                "insert_size_histogram": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectInsertSizeMetrics/execution/tumor.InsertSizeHistogram.pdf",
+                "per_base_coverage_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectDetailedHsMetrics/hsMetrics/ff4e97aa-337f-45e3-a65c-f6ca3d664b0d/call-collectPerBaseHsMetrics/shard-0/execution/tumor.base-clinvar-PerBaseCoverage.txt"
+                ],
+                "summary_hs_metrics": [],
+                "gc_bias_metrics_chart": null,
+                "bamcoverage_bigwig": null,
+                "gc_bias_metrics": null,
+                "verify_bam_id_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-verifyBamId/execution/tumor.VerifyBamId.selfSM",
+                "per_target_hs_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectDetailedHsMetrics/hsMetrics/ff4e97aa-337f-45e3-a65c-f6ca3d664b0d/call-collectPerTargetHsMetrics/shard-0/execution/tumor.target-acmg_genes-HsMetrics.txt"
+                ],
+                "wgs_metrics": null,
+                "flagstats": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-samtoolsFlagstat/execution/tumor.bam.flagstat",
+                "verify_bam_id_depth": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-verifyBamId/execution/tumor.VerifyBamId.depthSM",
+                "per_target_coverage_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectDetailedHsMetrics/hsMetrics/ff4e97aa-337f-45e3-a65c-f6ca3d664b0d/call-collectPerTargetHsMetrics/shard-0/execution/tumor.target-acmg_genes-PerTargetCoverage.txt"
+                ],
+                "per_base_hs_metrics": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectDetailedHsMetrics/hsMetrics/ff4e97aa-337f-45e3-a65c-f6ca3d664b0d/call-collectPerBaseHsMetrics/shard-0/execution/tumor.base-clinvar-HsMetrics.txt"
+                ],
+                "gc_bias_metrics_summary": null,
+                "hs_metrics": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorQc/qcExome/52cd48ea-deb3-4791-9cd0-242998f5e7f8/call-collectRoiHsMetrics/execution/tumor.roi-HsMetrics.txt"
+            },
+            "concordance": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-concordance/execution/concordance.somalier.pairs.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-concordance/execution/concordance.somalier.samples.tsv"
+            ],
+            "concordanceThreeway": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-concordanceThreeway/execution/concordance.somalier.pairs.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-concordanceThreeway/execution/concordance.somalier.samples.tsv"
+            ],
+            "tumor_rna": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-generateQcMetrics/execution/rna_metrics.txt",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-generateQcMetrics/execution/rna_coverage_by_transcript_position.pdf",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-samtoolsFlagstat/execution/MarkedSorted.bam.flagstat",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-strandednessCheck/shard-0/execution/trimmed_read_1strandness_check.txt"
+            ],
+            "fda_metrics": {
+                "unaligned_tumor_rna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/bb9f7b81-9b7c-4a58-90de-96f9ee8a619f/call-unalignedSeqFdaStats/shard-0/execution/tumor_rna_unaligned_metrics1.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/bb9f7b81-9b7c-4a58-90de-96f9ee8a619f/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836176_1_fastqc.zip",
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/bb9f7b81-9b7c-4a58-90de-96f9ee8a619f/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836176_2_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/bb9f7b81-9b7c-4a58-90de-96f9ee8a619f/call-md5sum/execution/tumor_rna_unaligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/bb9f7b81-9b7c-4a58-90de-96f9ee8a619f/call-generateFdaTables/execution/unaligned_tumor_rna_table1.csv"
+                },
+                "unaligned_normal_dna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/dd78111f-05c4-4fbd-a61f-ccfb656ea969/call-unalignedSeqFdaStats/shard-0/execution/normal_dna_unaligned_metrics1.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/dd78111f-05c4-4fbd-a61f-ccfb656ea969/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836195_1_fastqc.zip",
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/dd78111f-05c4-4fbd-a61f-ccfb656ea969/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836195_2_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/dd78111f-05c4-4fbd-a61f-ccfb656ea969/call-md5sum/execution/normal_dna_unaligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/dd78111f-05c4-4fbd-a61f-ccfb656ea969/call-generateFdaTables/execution/unaligned_normal_dna_table1.csv"
+                },
+                "aligned_tumor_dna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/db2c154a-3f85-43d8-9101-35681a41e2e9/call-alignedSeqFdaStats/execution/tumor_dna_aligned_metrics.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/db2c154a-3f85-43d8-9101-35681a41e2e9/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/tumor_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/db2c154a-3f85-43d8-9101-35681a41e2e9/call-md5sum/execution/tumor_dna_aligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/db2c154a-3f85-43d8-9101-35681a41e2e9/call-generateFdaTables/execution/aligned_tumor_dna_table2.csv"
+                },
+                "aligned_tumor_rna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/d8a2ecdd-49c7-451a-901d-6152697f2c3b/call-alignedSeqFdaStats/execution/tumor_rna_aligned_metrics.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/d8a2ecdd-49c7-451a-901d-6152697f2c3b/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/MarkedSorted_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/d8a2ecdd-49c7-451a-901d-6152697f2c3b/call-md5sum/execution/tumor_rna_aligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_tumor_rna_fda_metrics/generateFdaMetricsForBamOrFastqs/d8a2ecdd-49c7-451a-901d-6152697f2c3b/call-generateFdaTables/execution/aligned_tumor_rna_table3.csv"
+                },
+                "unaligned_tumor_dna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/59c15064-767b-431b-a20b-d97578d88e06/call-unalignedSeqFdaStats/shard-0/execution/tumor_dna_unaligned_metrics1.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/59c15064-767b-431b-a20b-d97578d88e06/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836187_1_fastqc.zip",
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/59c15064-767b-431b-a20b-d97578d88e06/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/SRR24836187_2_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/59c15064-767b-431b-a20b-d97578d88e06/call-md5sum/execution/tumor_dna_unaligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-unaligned_tumor_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/59c15064-767b-431b-a20b-d97578d88e06/call-generateFdaTables/execution/unaligned_tumor_dna_table1.csv"
+                },
+                "aligned_normal_dna": {
+                    "table_metrics": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/2bac3433-b42f-4e3e-a6ad-e0630e5eeca7/call-alignedSeqFdaStats/execution/normal_dna_aligned_metrics.txt"
+                    ],
+                    "fastqc_data": [
+                        "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/2bac3433-b42f-4e3e-a6ad-e0630e5eeca7/call-fastqc/execution/glob-484909f5c48b457e19de46005aa2d0a2/normal_fastqc.zip"
+                    ],
+                    "md5sums": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/2bac3433-b42f-4e3e-a6ad-e0630e5eeca7/call-md5sum/execution/normal_dna_aligned.md5",
+                    "table": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-generateFdaMetrics/generateFdaMetrics/f3c894c7-a423-4060-b4a1-4547f32e9f1e/call-aligned_normal_dna_fda_metrics/generateFdaMetricsForBamOrFastqs/2bac3433-b42f-4e3e-a6ad-e0630e5eeca7/call-generateFdaTables/execution/aligned_normal_dna_table2.csv"
+                }
+            }
+        },
+        "immuno.rnaseq": {
+            "fusioninspector_evidence": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.FusionInspector.fusions.abridged.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.FusionInspector.fusions.abridged.tsv.annotated",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.FusionInspector.fusions.abridged.tsv.annotated.coding_effect",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.FusionInspector.fusions.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.bed",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.bed.sorted.bed.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.bed.sorted.bed.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam.bai",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam.frag_coords",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam.read_coords",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam.read_coords.ok",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.consolidated.bam.read_coords.sort_by_readname",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.fa",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.fa.fai",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.fusion_inspector_web.html",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.fusion_inspector_web.json",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.gtf",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.igv.FusionJuncSpan",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.igv.Pfam.bed",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.igv.Pfam.gff3",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.igv.seqsimilar.bed",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.igv.seqsimilar.gff3",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.junction_reads.bam",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.junction_reads.bam.bai",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.junction_reads.bam.bed",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.junction_reads.bam.bed.sorted.bed.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.junction_reads.bam.bed.sorted.bed.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter.annot_filter.fail",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter.annot_filter.pass",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter.annot_filter.pass.EMadj",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter.annot_filter.pass.EMadj.FFPM",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.post_blast_and_promiscuity_filter.annot_filter.pass.EMadj.FFPM.wMicroH",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.spanning_reads.bam",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.spanning_reads.bam.bai",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.spanning_reads.bam.bed",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.spanning_reads.bam.bed.sorted.bed.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/glob-0bbd704817c2ac20a2ab4f83f54467c8/finspector.spanning_reads.bam.bed.sorted.bed.gz.tbi"
+            ],
+            "star_fusion": {
+                "candidates_preliminary": {
+                    "wannot_filter_artifact": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary.wSpliceInfo.wAnnot.annot_filter.pass.RTartifact.pass",
+                    "candidates_filtered_ffpm": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary.filtered.FFPM",
+                    "bp_filter": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.filter.intermediates_dir/star-fusion.post_blast_and_promiscuity_filter",
+                    "wannot_filter": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary.wSpliceInfo.wAnnot.annot_filter.pass",
+                    "wannot": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary.wSpliceInfo.wAnnot",
+                    "candidates": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary",
+                    "wannot_filter_artifact_minffpm": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.preliminary/star-fusion.fusion_candidates.preliminary.wSpliceInfo.wAnnot.annot_filter.pass.RTartifact.pass.minFFPM.0.025.pass"
+                },
+                "results": [
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/Chimeric.out.junction",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/SJ.out.tab",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.fusion_predictions.tsv",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.fusion_predictions.abridged.tsv",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-starFusionDetect/execution/STAR-Fusion_outdir/star-fusion.fusion_predictions.abridged.coding_effect.tsv",
+                    "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-agfusion/execution/agfusion_results.zip"
+                ]
+            },
+            "alignments": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-indexBam/execution/MarkedSorted.bam",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-indexBam/execution/MarkedSorted.bam.bai",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-tumorRnaLeftAlignIndels/execution/left_align_indels.bam",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-tumorRnaLeftAlignIndels/execution/left_align_indels.bai"
+            ],
+            "stringtie_expression": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-stringtie/execution/stringtie_transcripts.gtf",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-stringtie/execution/stringtie_gene_expression.tsv"
+            ],
+            "kallisto_expression": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-kallisto/execution/kallisto/abundance.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-kallisto/execution/kallisto/abundance.h5",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-transcriptToGene/execution/gene_abundance.tsv",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-rna/rnaseqStarFusion/273a9831-86c3-42ed-a56c-180149d1c3b7/call-kallisto/execution/kallisto/fusion.txt"
+            ]
+        },
+        "immuno.tumor_cram_crai": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-tumorIndexCram/execution/tumor.cram.crai",
+        "immuno.germline": {
+            "variants": [
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-germlineExome/germlineExome/67af34bc-93d2-414f-8085-80e8445415eb/call-detectVariants/germlineDetectVariants/5c30d96d-a18f-45ae-b78f-9ec0c7731ce3/call-filterVcf/germlineFilterVcf/3137f334-18b0-4961-9e0f-6d586993a19b/call-limitVariants/execution/annotated.filtered.final.vcf.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-germlineExome/germlineExome/67af34bc-93d2-414f-8085-80e8445415eb/call-detectVariants/germlineDetectVariants/5c30d96d-a18f-45ae-b78f-9ec0c7731ce3/call-filterVcf/germlineFilterVcf/3137f334-18b0-4961-9e0f-6d586993a19b/call-limitVariants/execution/annotated.filtered.final.vcf.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-germlineExome/germlineExome/67af34bc-93d2-414f-8085-80e8445415eb/call-detectVariants/germlineDetectVariants/5c30d96d-a18f-45ae-b78f-9ec0c7731ce3/call-filterVcf/germlineFilterVcf/3137f334-18b0-4961-9e0f-6d586993a19b/call-indexFilteredVcf/execution/annotated.filtered.vcf.gz",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-germlineExome/germlineExome/67af34bc-93d2-414f-8085-80e8445415eb/call-detectVariants/germlineDetectVariants/5c30d96d-a18f-45ae-b78f-9ec0c7731ce3/call-filterVcf/germlineFilterVcf/3137f334-18b0-4961-9e0f-6d586993a19b/call-indexFilteredVcf/execution/annotated.filtered.vcf.gz.tbi",
+                "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-germlineExome/germlineExomeHlaTyping/3ea91ce9-eea8-4b56-9cdf-85cf796dbe9b/call-germlineExome/germlineExome/67af34bc-93d2-414f-8085-80e8445415eb/call-detectVariants/germlineDetectVariants/5c30d96d-a18f-45ae-b78f-9ec0c7731ce3/call-annotateVariants/vep/aeac0a2f-c92f-4996-8a3b-a5eea86fa392/call-vepTask/execution/merged_annotated.vcf_summary.html"
+            ]
+        },
+        "immuno.normal_cram_crai": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalIndexCram/execution/normal.cram.crai",
+        "immuno.pVACsplice": {
+            "mhc_i_log": null,
+            "splice_fasta_fai": null,
+            "mhc_i": [],
+            "mhc_ii_log": null,
+            "splice_transcript_combined_report": null,
+            "mhc_ii": [],
+            "splice_gtf": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacsplice/pvacsplice/2bdfbfe7-bacc-4702-ac53-f537c8ffdf08/call-runpvacsplice/pvacsplice_workflow/7711dda2-2e54-40be-94d0-76be65d44f5a/call-pvacsplice/execution/pvacsplice_predictions/Hu_159_TUMOR_DNA_gtf.tsv",
+            "regtools_output": {
+                "vcf": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacsplice/pvacsplice/2bdfbfe7-bacc-4702-ac53-f537c8ffdf08/call-runregtools/regtools_workflow/21f94e7b-9720-4a45-afcf-3e906edd4d2f/call-regtools/execution/splice_variant.vcf",
+                "tsv": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacsplice/pvacsplice/2bdfbfe7-bacc-4702-ac53-f537c8ffdf08/call-runregtools/regtools_workflow/21f94e7b-9720-4a45-afcf-3e906edd4d2f/call-regtools/execution/splice_junction.tsv",
+                "bed": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacsplice/pvacsplice/2bdfbfe7-bacc-4702-ac53-f537c8ffdf08/call-runregtools/regtools_workflow/21f94e7b-9720-4a45-afcf-3e906edd4d2f/call-regtools/execution/splice_variant.bed"
+            },
+            "splice_fasta": null,
+            "phase_vcf": null,
+            "combined": [],
+            "mhc_log": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacsplice/pvacsplice/2bdfbfe7-bacc-4702-ac53-f537c8ffdf08/call-runpvacsplice/pvacsplice_workflow/7711dda2-2e54-40be-94d0-76be65d44f5a/call-pvacsplice/execution/inputs.yml"
+        },
+        "immuno.pvacseq_annotated_expression_vcf_gz": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-index/execution/annotated.expression.vcf.gz",
+        "immuno.variants_final_annotated_tsv": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-addVepFieldsToTableWithoutPreferredTranscriptsTsv/execution/variants.final.annotated.tsv",
+        "immuno.normal_cram": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-somaticExome/somaticExome/88583b24-5959-4753-8acd-410dce86ff0f/call-normalIndexCram/execution/normal.cram",
+        "immuno.pvacseq_annotated_expression_vcf_gz_tbi": "/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159/cromwell-executions/immuno/edf204f7-942b-4ce7-b225-42df76d201f5/call-pvacseq/pvacseq/70c1909c-9016-40e3-88cf-b6e869e2aa60/call-index/execution/annotated.expression.vcf.gz.tbi"
+    }
+}
