@@ -300,10 +300,13 @@ def expand_immuno_pvacseq_mhc_lists(outputs_obj: Dict[str, Any], stats: Dict[str
     Special handling for immuno.pVACseq.{mhc_i,mhc_ii}:
     replace existing path lists with all files under the mapped glob-* dirs.
     """
-    immuno = outputs_obj.get("immuno")
-    if not isinstance(immuno, dict):
-        return
-    pvacseq = immuno.get("pVACseq")
+    # Outputs JSON stores this as a flattened top-level key.
+    pvacseq = outputs_obj.get("immuno.pVACseq")
+    if not isinstance(pvacseq, dict):
+        # Backward-compatible fallback if a nested object is used.
+        immuno = outputs_obj.get("immuno")
+        if isinstance(immuno, dict):
+            pvacseq = immuno.get("pVACseq")
     if not isinstance(pvacseq, dict):
         return
 
@@ -314,7 +317,7 @@ def expand_immuno_pvacseq_mhc_lists(outputs_obj: Dict[str, Any], stats: Dict[str
         if not all(isinstance(x, str) for x in v):
             continue
         expanded = expand_paths_under_glob_dirs(v)
-        if len(expanded) != len(v):
+        if expanded != v:
             pvacseq[k] = expanded
             stats["pvacseq_glob_list_expanded"] += 1
 
