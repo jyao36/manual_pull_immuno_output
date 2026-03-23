@@ -18,6 +18,10 @@ This script take an existing outputs.json file (from Hu_159_out, a successful ru
 scratch directory structure (/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159_attempt2/cromwell-executions/immuno/fa804bb0-48fd-484b-8df3-f70e212fe756), and makes a new `outputs.repointed.json`
 file for `Hu_159_attempt2`
 Usage: bash run_manual_build_outputs_json.sh
+If filenames contain sample IDs (for example `Hu_159_...` in template vs `Hu_159_attempt2_...` in new run), pass:
+- `--template-sample-id` for the old sample used by template file names
+- `--sample-id` for the new sample used by the new run
+The script normalizes the leading sample prefix in filenames for matching.
 
 Step 3: manual_pull_outputs.sh
 Takes the new `outputs.json` and run `pull_outputs.py` from the cloud-workflows repo, and pull outputs into a specified output_dir.

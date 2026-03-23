@@ -43,18 +43,62 @@ def normalize_segment(seg: str) -> str:
     """
     if is_uuid_segment(seg):
         return "{uuid}"
-    if seg.startswith("glob-"):
-        return "{glob}"
     return seg
 
 
-def normalized_relpath_key(workflow_dir: Path, file_path: Path) -> Tuple[str, ...]:
+def normalize_filename_sample_prefix(
+    filename: str,
+    *,
+    sample_id: Optional[str],
+) -> str:
+    """
+    Optionally normalize a leading sample-id prefix in filenames.
+    Example:
+      Hu_159_TUMOR_DNA.x.y -> {sample}_TUMOR_DNA.x.y
+    """
+    if not sample_id:
+        return filename
+    prefix = f"{sample_id}_"
+    if filename.startswith(prefix):
+        return "{sample}_" + filename[len(prefix) :]
+    return filename
+
+
+def normalize_relpath_parts(
+    parts: Tuple[str, ...],
+    *,
+    filename_sample_id: Optional[str],
+) -> Tuple[str, ...]:
+    if not parts:
+        return parts
+    normalized = [
+        normalize_segment(
+            s
+        )
+        for s in parts
+    ]
+    normalized[-1] = normalize_filename_sample_prefix(
+        normalized[-1],
+        sample_id=filename_sample_id,
+    )
+    return tuple(normalized)
+
+
+def normalized_relpath_key(
+    workflow_dir: Path,
+    file_path: Path,
+    *,
+    filename_sample_id: Optional[str],
+) -> Tuple[str, ...]:
     """
     Key a file by its relative path from workflow_dir, but normalize unstable segments
     (UUIDs, glob hashes). This is usually stable across runs of the same workflow.
     """
     rel = file_path.relative_to(workflow_dir)
-    return tuple(normalize_segment(s) for s in rel.parts)
+    return normalize_relpath_parts(
+        rel.parts,
+        filename_sample_id=filename_sample_id,
+    )
 
 
 def iter_execution_files(workflow_dir: Path) -> Iterable[Path]:
@@ -80,7 +124,11 @@ def iter_execution_files(workflow_dir: Path) -> Iterable[Path]:
 OutputKey = Tuple[str, ...]  # normalized relative path parts (includes filename)
 
 
-def key_for_output_path(path_str: str) -> Optional[OutputKey]:
+def key_for_output_path(
+    path_str: str,
+    *,
+    filename_sample_id: Optional[str],
+) -> Optional[OutputKey]:
     """
     Turn an outputs.json path string into a stable key.
     Returns None if it doesn't look like a local cromwell-executions path.
@@ -99,11 +147,18 @@ def key_for_output_path(path_str: str) -> Optional[OutputKey]:
                 rel_parts = parts[i + 3 :]  # under workflow dir
                 if not rel_parts:
                     return None
-                return tuple(normalize_segment(s) for s in rel_parts)
+                return normalize_relpath_parts(
+                    rel_parts,
+                    filename_sample_id=filename_sample_id,
+                )
     return None
 
 
-def build_index(workflow_dir: Path) -> Dict[OutputKey, Path]:
+def build_index(
+    workflow_dir: Path,
+    *,
+    filename_sample_id: Optional[str],
+) -> Dict[OutputKey, Path]:
     """
     Build a mapping from (call-chain, filename) -> actual file path in new workflow run.
     """
@@ -111,7 +166,11 @@ def build_index(workflow_dir: Path) -> Dict[OutputKey, Path]:
     collisions: Dict[OutputKey, List[Path]] = {}
 
     for fp in iter_execution_files(workflow_dir):
-        k = normalized_relpath_key(workflow_dir, fp)
+        k = normalized_relpath_key(
+            workflow_dir,
+            fp,
+            filename_sample_id=filename_sample_id,
+        )
         if k in idx:
             collisions.setdefault(k, [idx[k]]).append(fp)
             continue
@@ -133,6 +192,7 @@ def rewrite_outputs_obj(
     obj: Any,
     idx: Dict[OutputKey, Path],
     *,
+    template_sample_id: Optional[str],
     strict: bool,
     stats: Dict[str, int],
 ) -> Any:
@@ -146,6 +206,7 @@ def rewrite_outputs_obj(
             rewrite_outputs_obj(
                 v,
                 idx,
+                template_sample_id=template_sample_id,
                 strict=strict,
                 stats=stats,
             )
@@ -156,6 +217,7 @@ def rewrite_outputs_obj(
             k: rewrite_outputs_obj(
                 v,
                 idx,
+                template_sample_id=template_sample_id,
                 strict=strict,
                 stats=stats,
             )
@@ -164,7 +226,10 @@ def rewrite_outputs_obj(
     if isinstance(obj, str):
         stats["paths_seen"] += 1
 
-        k = key_for_output_path(obj)
+        k = key_for_output_path(
+            obj,
+            filename_sample_id=template_sample_id,
+        )
         if k and k in idx:
             new_path = str(idx[k])
             stats["paths_rewritten"] += 1
@@ -233,7 +298,15 @@ def main() -> int:
     ap.add_argument(
         "--sample-id",
         required=True,
-        help="Sample identifier used for naming output JSON, e.g. Hu_159_attempt2",
+        help="New sample identifier used for output naming and filename matching, e.g. Hu_159_attempt2",
+    )
+    ap.add_argument(
+        "--template-sample-id",
+        default=None,
+        help=(
+            "Sample identifier used in template filenames (old run). "
+            "If provided, filenames beginning with this prefix are normalized for matching."
+        ),
     )
     ap.add_argument(
         "--out-dir",
@@ -257,7 +330,10 @@ def main() -> int:
     if "outputs" not in template or not isinstance(template["outputs"], dict):
         raise ValueError("Template JSON must look like: {\"outputs\": {...}}")
 
-    idx = build_index(new_workflow_dir)
+    idx = build_index(
+        new_workflow_dir,
+        filename_sample_id=args.sample_id,
+    )
 
     stats = {
         "paths_seen": 0,
@@ -269,6 +345,7 @@ def main() -> int:
         "outputs": rewrite_outputs_obj(
             template["outputs"],
             idx,
+            template_sample_id=args.template_sample_id,
             strict=args.strict,
             stats=stats,
         )
@@ -284,6 +361,8 @@ def main() -> int:
         f"  template: {template_path}\n"
         f"  new_workflow_dir: {new_workflow_dir}\n"
         f"  wrote: {out_path}\n"
+        f"  sample_id (new run): {args.sample_id}\n"
+        f"  template_sample_id (old run): {args.template_sample_id}\n"
         f"  paths_seen: {stats['paths_seen']}\n"
         f"  paths_rewritten: {stats['paths_rewritten']}\n"
         f"  paths_unmapped (left as-is): {stats['paths_unmapped']}\n"
