@@ -1,33 +1,76 @@
-Documentation: 
+## Rebuild JSON Helper
 
-Purpose of this directory: 
-I have been having issues with pulling outputs from the immuno run scratch directory. Runs seems to fail at the step when pulling
-artifacts and exit with the error "OSError: [Errno 122] Disk quota exceeded". 
-The outputs are left in /scratch, but final step fails to copy relevant outputs back to storage1. 
+### Purpose
+- Some immuno runs fail at artifact pull with `OSError: [Errno 122] Disk quota exceeded` (on WashU RIS).
+- Workflow outputs still exist in scratch under `cromwell-executions`, but standard metadata/outputs retrieval can fail after workflow shutdown.
+- This is also intended to be used on Discovery where the immuno pipeline has been run but need to condense the outputs.
+- This directory provides a manual recovery path:
+  1) rebuild an `outputs.json` map
+  2) use that map with `pull_outputs.py` to copy outputs back to storage.
 
-Solution I am working on: 
-Since the workflow has ended when the job was exited, Cromwell server was terminated, and the script that fetches file path 
-no longer works. I will make a script that manually maps relevant files in a `outputs.json` file. 
-This file can be used by `pull_outputs.py` as a "map" to pull outputs from scratch to storage. 
+### Directory Layout
 
-Step 1: Clone cloud-workflows git repo
-```git clone https://github.com/wustl-oncology/cloud-workflows.git```
+```text
+rebuild_json/
+├── 01_run_manual_build_outputs_json.sh
+├── 02_run_manual_pull_outputs.sh
+├── scripts/
+│   ├── manual_build_outputs_json.py
+│   └── manual_pull_outputs.sh
+├── results/
+│   ├── outputs_json/
+│   └── pull_outputs/
+└── template_outputs_pvac7.0.0b1.json
+```
 
-Step 2: manual_build_outputs_json.py
-This script take an existing outputs.json file (from Hu_159_out, a successful run) as a template, looks at the failed run 
-scratch directory structure (/scratch1/fs1/mgriffit/jyao/pipeline_test/Hu_159_attempt2/cromwell-executions/immuno/fa804bb0-48fd-484b-8df3-f70e212fe756), and makes a new `outputs.repointed.json`
-file for `Hu_159_attempt2`
-Usage: bash run_manual_build_outputs_json.sh
-If filenames contain sample IDs (for example `Hu_159_...` in template vs `Hu_159_attempt2_...` in new run), pass:
-- `--template-sample-id` for the old sample used by template file names
-- `--sample-id` for the new sample used by the new run
-The script normalizes the leading sample prefix in filenames for matching.
+### High-level Workflow
+1) Clone `cloud-workflows`:
+`git clone https://github.com/wustl-oncology/cloud-workflows.git`
 
-Step 3: manual_pull_outputs.sh
-Takes the new `outputs.json` and run `pull_outputs.py` from the cloud-workflows repo, and pull outputs into a specified output_dir.
-Usage: bash run_manual_pull_outputs.sh 
+2) Build repointed outputs JSON:
+`bash 01_run_manual_build_outputs_json.sh`
 
+3) Pull outputs using rebuilt JSON:
+`bash 02_run_manual_pull_outputs.sh`
 
-NOTE:
-* The template json file was made from a run using pvactools version: suannakiwala/pvactools:7.0.0b1_ml_predictor3
+### What `scripts/manual_build_outputs_json.py` Does
+- Uses a successful run `outputs.json` as a structural template.
+- Scans files under the new run scratch workflow directory (`call-*/.../execution/...`).
+- Rewrites template output paths to new run paths by normalized key matching:
+  - normalizes UUID path segments
+  - supports sample prefix normalization in filenames:
+    - `--template-sample-id` for old/template sample prefix
+    - `--sample-id` for new-run sample prefix and output file naming
+- Includes FastQC fallback mapping for SRR-name changes:
+  - if direct match fails for `*_1_fastqc.zip` or `*_2_fastqc.zip`,
+  - matches by parent call path + mate number (`1`/`2`) while tolerating glob hash changes.
+- Expands `outputs["immuno.pVACseq"]["mhc_i"]` and `["mhc_ii"]`:
+  - finds mapped `glob-*` parent directories
+  - includes all files under those directories (not just template-listed files).
+- Expands `outputs["immuno.somatic"]["cnv"]["cnvkit"]` BED entries:
+  - discovers all `*.bed` files under mapped CNVkit `execution` directory/directories
+  - replaces template-specific BED file entries with discovered BED paths.
+- Prints summary stats, including counts for:
+  - rewritten paths
+  - FastQC fallback rewrites
+  - pVACseq list expansions
+  - CNVkit BED expansion.
+
+### Runner Scripts
+- `01_run_manual_build_outputs_json.sh` runs:
+  - `scripts/manual_build_outputs_json.py`
+  - and writes `results/outputs_json/<sample_id>_outputs.json`
+- `02_run_manual_pull_outputs.sh` runs:
+  - `scripts/manual_pull_outputs.sh`
+  - and writes `results/pull_outputs/<sample_id>_out`
+- `scripts/manual_pull_outputs.sh` wraps `cloud-workflows/scripts/pull_outputs.py` using:
+  - `--cloud-workflows-dir`
+  - `--json-file`
+  - `--outputs-dir`
+- `scripts/manual_build_outputs_json.py` writes:
+  - `results/outputs_json/<sample_id>_outputs.json`
+
+### Notes
+- Current template was created from a run using:
+  - `susannakiwala/pvactools:7.0.0b1_ml_predictor3`
 

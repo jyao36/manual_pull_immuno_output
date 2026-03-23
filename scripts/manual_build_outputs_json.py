@@ -29,6 +29,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 
 UUID_RE = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
+FASTQC_ZIP_RE = re.compile(r"_(1|2)_fastqc\.zip$")
 
 
 def is_uuid_segment(seg: str) -> bool:
@@ -122,6 +123,7 @@ def iter_execution_files(workflow_dir: Path) -> Iterable[Path]:
 
 
 OutputKey = Tuple[str, ...]  # normalized relative path parts (includes filename)
+FastqcParentKey = Tuple[str, ...]
 
 
 def key_for_output_path(
@@ -188,9 +190,201 @@ def build_index(
     return idx
 
 
+def fastqc_read_mate(filename: str) -> Optional[str]:
+    """
+    Return read mate number ("1" or "2") for fastqc zip files.
+    Example: SRR123_1_fastqc.zip -> "1"
+    """
+    m = FASTQC_ZIP_RE.search(filename)
+    if not m:
+        return None
+    return m.group(1)
+
+
+def normalize_parent_for_fastqc(parts: Tuple[str, ...]) -> FastqcParentKey:
+    """
+    Normalize parent path for fastqc fallback matching:
+    - Keep existing UUID normalization
+    - Collapse glob-* dir names so old/new run glob hashes can still match
+    """
+    out: List[str] = []
+    for seg in parts:
+        if seg.startswith("glob-"):
+            out.append("{glob}")
+        else:
+            out.append(seg)
+    return tuple(out)
+
+
+def build_fastqc_index(idx: Dict[OutputKey, Path]) -> Dict[Tuple[FastqcParentKey, str], Path]:
+    """
+    Build fallback index for fastqc zips keyed by:
+      (normalized-parent-through-glob, mate_number)
+    """
+    fastqc_idx: Dict[Tuple[FastqcParentKey, str], Path] = {}
+    collisions: Dict[Tuple[FastqcParentKey, str], List[Path]] = {}
+
+    for k, fp in idx.items():
+        mate = fastqc_read_mate(fp.name)
+        if mate is None:
+            continue
+        parent_key = normalize_parent_for_fastqc(k[:-1])
+        fk = (parent_key, mate)
+        if fk in fastqc_idx:
+            collisions.setdefault(fk, [fastqc_idx[fk]]).append(fp)
+            continue
+        fastqc_idx[fk] = fp
+
+    if collisions:
+        sys.stderr.write("WARNING: ambiguous fastqc fallback mappings detected:\n")
+        for fk, fps in list(collisions.items())[:50]:
+            sys.stderr.write(f"  - {fk}  ({len(fps)} matches)\n")
+        if len(collisions) > 50:
+            sys.stderr.write(f"  ... and {len(collisions) - 50} more\n")
+
+    return fastqc_idx
+
+
+def fallback_fastqc_match(
+    output_key: OutputKey,
+    original_path: str,
+    fastqc_idx: Dict[Tuple[FastqcParentKey, str], Path],
+) -> Optional[Path]:
+    """
+    For unmapped fastqc paths, match by parent path and mate number (_1/_2),
+    ignoring SRR prefix and glob hash differences.
+    """
+    mate = fastqc_read_mate(Path(original_path).name)
+    if mate is None:
+        return None
+    parent_key = normalize_parent_for_fastqc(output_key[:-1])
+    return fastqc_idx.get((parent_key, mate))
+
+
+def expand_paths_under_glob_dirs(paths: List[str]) -> List[str]:
+    """
+    Given a list of mapped file paths, identify parent glob-* directories and
+    return all files under those directories (deduplicated, sorted).
+    """
+    glob_dirs: List[Path] = []
+    for p_str in paths:
+        p = Path(p_str)
+        glob_dir = None
+        for parent in [p.parent, *p.parents]:
+            if parent.name.startswith("glob-"):
+                glob_dir = parent
+                break
+        if glob_dir is not None and glob_dir.is_dir():
+            glob_dirs.append(glob_dir)
+
+    if not glob_dirs:
+        return paths
+
+    seen = set()
+    expanded: List[str] = []
+    for gd in sorted(set(glob_dirs), key=lambda x: str(x)):
+        for root, _dirs, files in os.walk(gd):
+            root_p = Path(root)
+            for fn in sorted(files):
+                fp = root_p / fn
+                s = str(fp)
+                if s in seen:
+                    continue
+                seen.add(s)
+                expanded.append(s)
+    return expanded
+
+
+def expand_immuno_pvacseq_mhc_lists(outputs_obj: Dict[str, Any], stats: Dict[str, int]) -> None:
+    """
+    Special handling for immuno.pVACseq.{mhc_i,mhc_ii}:
+    replace existing path lists with all files under the mapped glob-* dirs.
+    """
+    # Outputs JSON stores this as a flattened top-level key.
+    pvacseq = outputs_obj.get("immuno.pVACseq")
+    if not isinstance(pvacseq, dict):
+        # Backward-compatible fallback if a nested object is used.
+        immuno = outputs_obj.get("immuno")
+        if isinstance(immuno, dict):
+            pvacseq = immuno.get("pVACseq")
+    if not isinstance(pvacseq, dict):
+        return
+
+    for k in ("mhc_i", "mhc_ii"):
+        v = pvacseq.get(k)
+        if not isinstance(v, list):
+            continue
+        if not all(isinstance(x, str) for x in v):
+            continue
+        expanded = expand_paths_under_glob_dirs(v)
+        if expanded != v:
+            pvacseq[k] = expanded
+            stats["pvacseq_glob_list_expanded"] += 1
+
+
+def expand_cnvkit_bed_paths(outputs_obj: Dict[str, Any], stats: Dict[str, int]) -> None:
+    """
+    Special handling for immuno.somatic.cnv.cnvkit:
+    replace template-specific BED entries with all *.bed files found in the
+    mapped cnvkit execution directory/directories.
+    """
+    somatic = outputs_obj.get("immuno.somatic")
+    if not isinstance(somatic, dict):
+        return
+    cnv = somatic.get("cnv")
+    if not isinstance(cnv, dict):
+        return
+    cnvkit = cnv.get("cnvkit")
+    if not isinstance(cnvkit, list):
+        return
+
+    execution_dirs: List[Path] = []
+    for v in cnvkit:
+        if not isinstance(v, str):
+            continue
+        p = Path(v)
+        for parent in [p.parent, *p.parents]:
+            if parent.name == "execution":
+                if parent.is_dir():
+                    execution_dirs.append(parent)
+                break
+
+    bed_files: List[str] = []
+    seen = set()
+    for ex_dir in sorted(set(execution_dirs), key=lambda x: str(x)):
+        for root, _dirs, files in os.walk(ex_dir):
+            root_p = Path(root)
+            for fn in sorted(files):
+                if not fn.endswith(".bed"):
+                    continue
+                fp = str(root_p / fn)
+                if fp in seen:
+                    continue
+                seen.add(fp)
+                bed_files.append(fp)
+
+    if not bed_files:
+        return
+
+    # Keep non-BED list entries in original order (including nulls), and
+    # replace all BED entries with discovered BED files.
+    non_bed_entries: List[Any] = []
+    for v in cnvkit:
+        if isinstance(v, str) and v.endswith(".bed"):
+            continue
+        non_bed_entries.append(v)
+
+    new_list = bed_files + non_bed_entries
+    if new_list != cnvkit:
+        cnv["cnvkit"] = new_list
+        stats["cnvkit_bed_list_expanded"] += 1
+        stats["cnvkit_bed_paths_added"] += len(bed_files)
+
+
 def rewrite_outputs_obj(
     obj: Any,
     idx: Dict[OutputKey, Path],
+    fastqc_idx: Dict[Tuple[FastqcParentKey, str], Path],
     *,
     template_sample_id: Optional[str],
     strict: bool,
@@ -206,6 +400,7 @@ def rewrite_outputs_obj(
             rewrite_outputs_obj(
                 v,
                 idx,
+                fastqc_idx,
                 template_sample_id=template_sample_id,
                 strict=strict,
                 stats=stats,
@@ -217,6 +412,7 @@ def rewrite_outputs_obj(
             k: rewrite_outputs_obj(
                 v,
                 idx,
+                fastqc_idx,
                 template_sample_id=template_sample_id,
                 strict=strict,
                 stats=stats,
@@ -234,6 +430,13 @@ def rewrite_outputs_obj(
             new_path = str(idx[k])
             stats["paths_rewritten"] += 1
             return new_path
+
+        if k:
+            fallback = fallback_fastqc_match(k, obj, fastqc_idx)
+            if fallback is not None:
+                stats["paths_rewritten"] += 1
+                stats["paths_rewritten_fastqc_fallback"] += 1
+                return str(fallback)
 
         stats["paths_unmapped"] += 1
         if strict and k is not None:
@@ -334,22 +537,30 @@ def main() -> int:
         new_workflow_dir,
         filename_sample_id=args.sample_id,
     )
+    fastqc_idx = build_fastqc_index(idx)
 
     stats = {
         "paths_seen": 0,
         "paths_rewritten": 0,
+        "paths_rewritten_fastqc_fallback": 0,
         "paths_unmapped": 0,
+        "pvacseq_glob_list_expanded": 0,
+        "cnvkit_bed_list_expanded": 0,
+        "cnvkit_bed_paths_added": 0,
     }
 
     rewritten = {
         "outputs": rewrite_outputs_obj(
             template["outputs"],
             idx,
+            fastqc_idx,
             template_sample_id=args.template_sample_id,
             strict=args.strict,
             stats=stats,
         )
     }
+    expand_immuno_pvacseq_mhc_lists(rewritten["outputs"], stats)
+    expand_cnvkit_bed_paths(rewritten["outputs"], stats)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
@@ -365,6 +576,10 @@ def main() -> int:
         f"  template_sample_id (old run): {args.template_sample_id}\n"
         f"  paths_seen: {stats['paths_seen']}\n"
         f"  paths_rewritten: {stats['paths_rewritten']}\n"
+        f"  paths_rewritten_fastqc_fallback: {stats['paths_rewritten_fastqc_fallback']}\n"
+        f"  pvacseq_glob_list_expanded: {stats['pvacseq_glob_list_expanded']}\n"
+        f"  cnvkit_bed_list_expanded: {stats['cnvkit_bed_list_expanded']}\n"
+        f"  cnvkit_bed_paths_added: {stats['cnvkit_bed_paths_added']}\n"
         f"  paths_unmapped (left as-is): {stats['paths_unmapped']}\n"
     )
 
